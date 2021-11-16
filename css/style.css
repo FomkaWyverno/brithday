@@ -1,0 +1,173 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  font-family: 'Quadrat Grotesk New W03 Bold', open-sans, sans-serif;
+  color: #000;
+  background-color: #1c1c1c;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, p, ul, ol {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+td {
+  text-align: center;
+  padding: 0;
+}
+
+.visiually-hidden {
+  visibility: hidden;
+}
+
+.Mobile {
+  display: none;
+}
+
+hr {
+  margin: 0px;
+  width: 50%;
+  size: 5px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.white-block {
+  position: relative;
+  background-color: initial;
+  overflow: hidden;
+  z-index: 3;
+  top: 0%;
+  transition: top 1s ease;
+  transition: transform .3s ease;
+}
+
+.white-block::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  right: 100%;
+  transition: right 1s ease;
+  z-index: -1;
+}
+
+.white-block__text {
+  position: relative;
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-size: 56px;
+  color: #1c1c1c;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
+  z-index: 2;
+}
+
+.white-block__text::after {
+  display: none;
+  position: absolute;
+  top: 50%;
+  content: '';
+  top: 17%;
+  width: 3px;
+  height: 65%;
+  background-color: #000;
+}
+
+.start::after {
+  right: 0%;
+}
+
+.left::after {
+  left: 100%;
+  transition: left 1s ease;
+}
+
+.down {
+  transform: translate(0px, 800px);
+}
+
+.up .white-block__text::after {
+  display: block;
+  animation: cursor 1.3s infinite;
+  left: calc(100% - 20px);
+}
+
+.left-start::after {
+  left: 0%;
+}
+
+.rotate90 {
+  transform: rotate(90deg);
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
